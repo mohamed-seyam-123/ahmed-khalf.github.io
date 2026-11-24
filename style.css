@@ -508,3 +508,64 @@ html{min-height:100%;-webkit-text-size-adjust:100%;text-size-adjust:100%}
   .social-rail .social-link{width:32px;height:32px;flex-basis:32px}
 }
 @keyframes mobileRailFlow{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+
+
+/* V13: portrait beside the name + larger social buttons */
+.hero-identity{
+  display:flex;
+  align-items:center;
+  gap:clamp(14px,2vw,24px);
+  width:100%;
+  margin:24px 0 20px;
+}
+.hero-identity .hero-avatar{
+  display:block;
+  width:clamp(88px,10vw,126px);
+  height:clamp(108px,12vw,150px);
+  flex:0 0 auto;
+  object-fit:cover;
+  object-position:center 19%;
+  border-radius:18px;
+  border:1px solid rgba(190,215,255,.42);
+  padding:4px;
+  background:linear-gradient(145deg,rgba(255,255,255,.18),rgba(111,151,220,.08));
+  box-shadow:0 12px 34px rgba(0,0,0,.28),0 0 26px rgba(105,151,232,.12),inset 0 1px rgba(255,255,255,.22);
+}
+.hero-identity .hero-name{
+  flex:1 1 auto;
+  min-width:0;
+  margin:0;
+  font-size:clamp(54px,6.3vw,86px);
+  line-height:.94;
+}
+@media(max-width:900px){
+  .hero-identity{gap:15px}
+  .hero-identity .hero-avatar{width:92px;height:112px}
+  .hero-identity .hero-name{font-size:clamp(49px,7.3vw,68px)}
+}
+@media(max-width:650px){
+  .hero-identity{gap:13px;margin:15px 0 13px;align-items:center}
+  .hero-identity .hero-avatar{width:82px;height:100px;border-radius:14px;padding:3px;object-position:center 18%}
+  .hero-identity .hero-name,
+  .glass-panel .hero-identity h1.hero-name{
+    font-size:clamp(39px,11.2vw,53px);
+    line-height:.98;
+    margin:0;
+    letter-spacing:-.05em;
+    padding:0 .08em .05em 0;
+  }
+  .hero-identity .hero-name .name-first,
+  .hero-identity .hero-name .name-last{padding-right:.08em}
+  .social-rail .social-link{width:43px;height:43px;flex-basis:43px;border-radius:13px}
+  .social-rail .social-link svg{width:21px;height:21px}
+  .social-rail{gap:9px;padding:8px 11px}
+}
+@media(max-width:380px){
+  .hero-identity{gap:10px}
+  .hero-identity .hero-avatar{width:72px;height:88px;border-radius:12px}
+  .hero-identity .hero-name,
+  .glass-panel .hero-identity h1.hero-name{font-size:clamp(35px,10.5vw,43px)}
+  .social-rail{gap:7px;padding:7px 9px}
+  .social-rail .social-link{width:40px;height:40px;flex-basis:40px}
+  .social-rail .social-link svg{width:20px;height:20px}
+}
