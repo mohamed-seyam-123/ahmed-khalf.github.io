@@ -585,3 +585,26 @@ html{min-height:100%;-webkit-text-size-adjust:100%;text-size-adjust:100%}
   .social-rail .social-link{width:43px;height:43px;flex-basis:43px}
   .social-rail .social-link svg{width:21px;height:21px}
 }
+
+
+/* V15: clearly visible size increase + cache refresh */
+@media (min-width: 901px){
+  .hero-identity .hero-avatar{width:clamp(116px,12vw,150px);height:clamp(142px,14.5vw,184px)}
+}
+@media (min-width: 651px) and (max-width: 900px){
+  .hero-identity .hero-avatar{width:108px;height:132px}
+}
+@media (max-width: 650px){
+  .hero-identity{gap:12px}
+  .hero-identity .hero-avatar{width:96px;height:118px;border-radius:15px}
+  .social-rail .social-link{width:48px;height:48px;flex-basis:48px}
+  .social-rail .social-link svg{width:23px;height:23px}
+}
+@media (max-width: 380px){
+  .hero-identity{gap:9px}
+  .hero-identity .hero-avatar{width:86px;height:106px;border-radius:13px}
+  .hero-identity .hero-name,.glass-panel .hero-identity h1.hero-name{font-size:clamp(34px,10vw,41px)}
+  .social-rail{gap:6px;padding:7px 8px}
+  .social-rail .social-link{width:44px;height:44px;flex-basis:44px}
+  .social-rail .social-link svg{width:21px;height:21px}
+}
