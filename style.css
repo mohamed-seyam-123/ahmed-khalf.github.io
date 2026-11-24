@@ -452,3 +452,59 @@ h1 em{font-weight:500;color:#b9ccef}
   .social-rail{gap:7px;padding:8px 9px}
   .social-rail .social-link{width:36px;height:36px;flex-basis:36px}
 }
+
+
+/* V11: true device viewport sizing + compact phone composition */
+html{min-height:100%;-webkit-text-size-adjust:100%;text-size-adjust:100%}
+@media(max-width:650px){
+  html,body{width:100%;min-width:0;max-width:100%;overflow-x:hidden}
+  body{overflow-y:auto;min-height:100dvh}
+  .scene{
+    width:100%;min-height:100vh;min-height:100svh;min-height:100dvh;
+    height:auto;box-sizing:border-box;overflow:hidden;
+    padding:68px 13px 18px;gap:0;
+  }
+  .topbar{height:56px;padding:0 13px;gap:7px}
+  .monogram{font-size:23px}
+  .top-label{font-size:5.5px;letter-spacing:.75px;gap:4px}
+  .top-contact{font-size:6.5px;letter-spacing:.55px;padding:6px 0}
+  .glass-panel{width:100%;max-width:430px;margin:5px auto 12px;padding:20px 17px 17px;border-radius:11px}
+  .eyebrow{font-size:7px;letter-spacing:1.6px;gap:7px}
+  .eyebrow-line{width:19px}
+  .glass-panel h1.hero-name{font-size:clamp(43px,12.4vw,59px);line-height:.98;margin:15px 0 10px;letter-spacing:-.045em;padding:0 .1em .04em 0}
+  .role-line{font-size:8px;letter-spacing:1.35px;gap:7px}
+  .intro{font-size:11px;line-height:1.58;margin:12px 0 13px}
+  .details{gap:10px;padding:13px 0}
+  .detail{gap:9px}
+  .detail-icon{width:31px;height:31px;flex-basis:31px;font-size:13px}
+  .detail small{font-size:7px;letter-spacing:1.35px;margin-bottom:3px}
+  .detail strong{font-size:10.5px;line-height:1.35}
+  .interests{padding-top:13px}
+  .section-label{font-size:7px;letter-spacing:1.7px}
+  .tags{gap:7px;margin-top:9px}
+  .tags span{font-size:9px;padding:7px 10px}
+  .panel-footer{margin-top:13px;padding-top:13px}
+  .contact-button{min-height:42px;font-size:8px;letter-spacing:1.4px}
+  .social-rail{position:relative;inset:auto;transform:none;width:max-content;max-width:100%;margin:0 auto 12px;padding:7px 9px;gap:7px;animation:mobileRailFlow .7s .4s both}
+  .social-rail .social-link{width:34px;height:34px;flex-basis:34px;border-radius:10px}
+  .social-rail .social-link svg{width:16px;height:16px}
+  .image-caption{position:relative;left:auto;right:auto;bottom:auto;width:100%;margin:0 auto 2px;gap:6px;font-size:6.5px;letter-spacing:.8px;line-height:1.5}
+  .image-caption span{font-size:11px}
+  .image-caption i{width:18px}
+  .corner-mark{top:64px;right:18px;font-size:9px}
+  .medical-float.glass-bubble{width:62px;height:62px;padding:9px;opacity:.2}
+  .stethoscope.glass-bubble{right:2%;top:10%}
+  .syringe.glass-bubble{right:1%;bottom:12%}
+  .scalpel.glass-bubble{left:1%;top:15%}
+  .orbit-one{width:125px;height:125px;right:-75px;top:18%}
+  .orbit-two{width:90px;height:90px;right:-35px;top:29%}
+}
+@media(max-width:380px){
+  .scene{padding-left:10px;padding-right:10px}
+  .glass-panel{padding:18px 14px 15px}
+  .glass-panel h1.hero-name{font-size:clamp(41px,12vw,48px)}
+  .top-label{font-size:5px;letter-spacing:.45px}
+  .social-rail{gap:6px;padding:6px 8px}
+  .social-rail .social-link{width:32px;height:32px;flex-basis:32px}
+}
+@keyframes mobileRailFlow{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}

@@ -8,3 +8,7 @@ AHMED KHALF — MIDNIGHT GLASS PORTFOLIO
 وفيه تأثير Glassmorphism وحركات دخول وخلفية Parallax بسيطة.
 
 لتعديل البيانات أو روابط التواصل: افتح index.html وعدّل النصوص والروابط.
+
+PROFILE PHOTO
+Your profile photo is stored at assets/profile.jpg and is used as the page background portrait.
+Keep this folder and file in the same location when uploading the website to GitHub.
