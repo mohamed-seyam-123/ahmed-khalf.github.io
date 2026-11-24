@@ -1,0 +1,10 @@
+
+{
+  "redirects": [
+    {
+      "source": "/(.*)",
+      "destination": "https://mohamed-seyam-123.github.io/ahmed-khalf.github.io/$1",
+      "permanent": true
+    }
+  ]
+}
