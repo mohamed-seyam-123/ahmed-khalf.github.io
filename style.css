@@ -272,3 +272,183 @@ h1 em{font-weight:500;color:#b9ccef}
 .hero-name .name-last{-webkit-text-fill-color:transparent}
 @media(max-width:650px){.glass-panel h1.hero-name{font-size:clamp(50px,14vw,72px);letter-spacing:-.045em;padding-right:.12em}}
 @media(max-width:380px){.glass-panel h1.hero-name{font-size:clamp(46px,13.5vw,54px);letter-spacing:-.04em}}
+
+
+/* V10: dedicated mobile layout — no overlapping, clipped content, or detached footer */
+@media (max-width:650px){
+  html,body{width:100%;overflow-x:hidden}
+  body{overflow-y:auto}
+  .scene{
+    width:100%;
+    min-height:100svh;
+    height:auto;
+    overflow:hidden;
+    display:flex;
+    flex-direction:column;
+    align-items:stretch;
+    justify-content:flex-start;
+    padding:82px 15px 28px;
+    gap:0;
+  }
+  .topbar{
+    position:absolute;
+    top:0;left:0;right:0;
+    height:64px;
+    padding:0 17px;
+    display:grid;
+    grid-template-columns:auto minmax(0,1fr) auto;
+    gap:9px;
+  }
+  .monogram{font-size:25px;white-space:nowrap}
+  .top-label{
+    min-width:0;
+    justify-content:center;
+    gap:5px;
+    font-size:6px;
+    letter-spacing:1px;
+    white-space:nowrap;
+    overflow:hidden;
+  }
+  .top-label i{flex:0 0 3px}
+  .top-contact{font-size:7px;letter-spacing:.7px;padding:8px 0;white-space:nowrap}
+  .top-contact span{margin-left:3px;font-size:11px}
+  .glass-panel{
+    position:relative;
+    inset:auto;
+    transform:none;
+    width:100%;
+    max-width:480px;
+    margin:10px auto 18px;
+    padding:27px 21px 23px;
+    border-radius:12px;
+    overflow:hidden;
+    animation:mobileIn .9s .12s both;
+  }
+  .eyebrow{font-size:8px;letter-spacing:2px;gap:9px}
+  .hero-name,
+  .glass-panel h1.hero-name{
+    display:block;
+    width:100%;
+    max-width:100%;
+    margin:21px 0 15px;
+    padding:0 .08em .06em 0;
+    font-size:clamp(49px,14.5vw,65px);
+    line-height:1.02;
+    letter-spacing:-.055em;
+    overflow:visible;
+  }
+  .hero-name .name-first,.hero-name .name-last{
+    display:inline-block;
+    max-width:100%;
+    padding-right:.12em;
+    margin-right:0;
+    overflow:visible;
+  }
+  .role-line{
+    flex-wrap:wrap;
+    gap:8px;
+    font-size:9px;
+    letter-spacing:1.8px;
+    line-height:1.5;
+  }
+  .intro{
+    max-width:none;
+    margin:17px 0 20px;
+    font-size:13px;
+    line-height:1.75;
+    letter-spacing:0;
+  }
+  .details{
+    grid-template-columns:minmax(0,1fr);
+    gap:17px;
+    padding:19px 0;
+  }
+  .detail{gap:12px;min-width:0}
+  .detail-icon{width:36px;height:36px;flex:0 0 36px;font-size:15px}
+  .detail small{font-size:8px;letter-spacing:1.8px}
+  .detail strong{
+    font-size:12px;
+    line-height:1.45;
+    white-space:normal;
+    overflow-wrap:anywhere;
+  }
+  .interests{padding-top:19px}
+  .section-label{font-size:8px;letter-spacing:2px}
+  .tags{flex-wrap:wrap;gap:8px;margin-top:12px}
+  .tags span{font-size:10px;padding:9px 13px}
+  .panel-footer{
+    display:flex;
+    align-items:stretch;
+    justify-content:flex-start;
+    margin-top:20px;
+    padding-top:18px;
+  }
+  .contact-button{
+    width:100%;
+    min-height:48px;
+    justify-content:center;
+    gap:12px;
+    padding:0 14px;
+    font-size:9px;
+    letter-spacing:1.8px;
+  }
+  .social-rail{
+    position:relative;
+    inset:auto;
+    transform:none;
+    width:max-content;
+    max-width:100%;
+    margin:0 auto 19px;
+    padding:9px 12px;
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+    border:1px solid rgba(193,216,255,.2);
+    border-radius:17px;
+    background:rgba(11,22,43,.58);
+    backdrop-filter:blur(16px);
+    -webkit-backdrop-filter:blur(16px);
+    animation:mobileRail .8s .5s both;
+  }
+  .rail-label,.rail-line{display:none}
+  .social-rail .social-link{width:39px;height:39px;flex:0 0 39px;border-radius:12px}
+  .social-rail .social-link svg{width:18px;height:18px}
+  .social-rail .social-link span{display:none}
+  .image-caption{
+    position:relative;
+    left:auto;right:auto;bottom:auto;
+    width:100%;
+    margin:0 auto 5px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:8px;
+    text-align:center;
+    font-size:7px;
+    letter-spacing:1.1px;
+    line-height:1.8;
+  }
+  .image-caption span{font-size:13px}
+  .image-caption i{width:24px}
+  .corner-mark{top:76px;right:22px;font-size:10px}
+  .vertical-note{display:none}
+  .medical-float.glass-bubble{width:72px;height:72px;padding:11px;opacity:.22}
+  .stethoscope.glass-bubble{--bubble-x:76%}
+  .syringe.glass-bubble{--bubble-x:86%}
+  .scalpel.glass-bubble{--bubble-x:9%}
+  .medical-orbit{opacity:.45}
+  .orbit-one{width:150px;height:150px;right:-80px;top:20%}
+  .orbit-two{width:105px;height:105px;right:-30px;top:31%}
+}
+@media(max-width:380px){
+  .scene{padding-left:12px;padding-right:12px}
+  .topbar{padding:0 13px;gap:6px}
+  .top-label{font-size:5.5px;letter-spacing:.65px}
+  .glass-panel{padding:24px 17px 21px}
+  .glass-panel h1.hero-name{font-size:clamp(46px,14vw,54px);letter-spacing:-.05em}
+  .social-rail{gap:7px;padding:8px 9px}
+  .social-rail .social-link{width:36px;height:36px;flex-basis:36px}
+}
