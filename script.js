@@ -23,7 +23,7 @@ if (panel && window.matchMedia("(pointer:fine)").matches) {
     if (Math.abs(px) < 1.4 && Math.abs(py) < 1.4) {
       panel.style.setProperty("--tilt-x", `${(-py * 1.1).toFixed(2)}deg`);
       panel.style.setProperty("--tilt-y", `${(px * 1.1).toFixed(2)}deg`);
-      panel.style.transform = `translate(0,-45%) perspective(1000px) rotateX(${-py * 1.1}deg) rotateY(${px * 1.1}deg)`;
+      panel.style.transform = `perspective(1000px) rotateX(${-py * 1.1}deg) rotateY(${px * 1.1}deg)`;
     }
   });
   sceneEl.addEventListener("pointerleave", () => {

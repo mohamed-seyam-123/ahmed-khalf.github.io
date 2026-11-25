@@ -608,3 +608,57 @@ html{min-height:100%;-webkit-text-size-adjust:100%;text-size-adjust:100%}
   .social-rail .social-link{width:44px;height:44px;flex-basis:44px}
   .social-rail .social-link svg{width:21px;height:21px}
 }
+
+/* v16 edits: bigger name, vertical rectangular social buttons */
+.hero-name .nick{display:block;font-size:.2em;font-weight:500;letter-spacing:2px;color:#9eb5dc;margin-top:6px;font-style:normal}
+.social-rail .social-link{width:170px;height:46px;border-radius:12px;display:flex;align-items:center;justify-content:flex-start;gap:12px;padding:0 16px;flex:0 0 46px}
+.social-rail .social-link span{position:static;opacity:1;transform:none;padding:0;border:0;background:none;backdrop-filter:none;pointer-events:auto;font-size:12px;letter-spacing:1px;display:inline}
+.social-rail .social-link:hover span{transform:none}
+.social-rail .social-link svg{width:20px;height:20px;flex:0 0 20px}
+.social-rail{gap:10px}.rail-label,.rail-line{display:none}
+@media(max-width:650px){
+ .social-rail{flex-direction:column!important;width:100%!important;max-width:260px;padding:10px!important;gap:8px!important;align-items:stretch!important}
+ .social-rail .social-link{width:100%!important;height:42px!important;flex:0 0 42px!important;justify-content:center}
+ .social-rail .social-link span{display:inline!important;font-size:11px}
+}
+.hero-name{font-size:clamp(46px,4.6vw,64px)!important;white-space:nowrap;letter-spacing:-.06em}
+.hero-name .nick{letter-spacing:2px}
+@media(max-width:650px){.glass-panel h1.hero-name{font-size:44px!important}}
+@media(max-width:380px){.glass-panel h1.hero-name{font-size:38px!important}}
+
+/* v17 responsive layout: content flows, never clipped on short or wide screens */
+html{-webkit-text-size-adjust:100%}
+body{overflow-x:hidden;overflow-y:auto}
+.hero-name{font-size:clamp(40px,3.9vw,56px)!important}
+@keyframes panelFlow{from{opacity:0;transform:translateY(24px);filter:blur(8px)}to{opacity:1;transform:none;filter:blur(0)}}
+@media(min-width:651px){
+  .scene{height:auto!important;min-height:max(100svh,700px);display:flex;align-items:center;padding:120px 0 90px}
+  .glass-panel{position:relative!important;left:auto!important;top:auto!important;transform:none!important;margin-left:clamp(24px,10.2vw,260px);width:min(520px,calc(100vw - 340px));min-width:380px;animation:panelFlow 1.1s .25s both!important}
+  .social-rail{position:absolute;right:clamp(14px,3vw,70px);top:50%}
+  .social-rail .social-link{width:clamp(140px,11vw,170px)}
+  .image-caption{position:absolute;bottom:34px}
+}
+@media(min-width:651px) and (max-width:900px){.glass-panel{width:min(52vw,420px);min-width:0;padding:30px 26px;margin-left:5vw}.hero-name{font-size:clamp(38px,5.2vw,48px)!important}.social-rail .social-link{width:140px}}
+@media(max-width:360px){.glass-panel h1.hero-name{font-size:36px!important}.hero-avatar{width:92px!important;height:auto}}
+@media(max-width:650px){.scene{padding-top:96px}}
+@media(min-width:1700px){html{font-size:112%}.glass-panel{width:min(560px,40vw)}}
+/* v18 compact phone layout: card + all social buttons on one screen */
+@media(max-width:650px){
+  .scene{display:block!important;min-height:100svh!important;padding:60px 12px 10px!important}
+  .topbar{height:48px!important}
+  .corner-mark,.image-caption,.vertical-note,.eyebrow,.medical-float{display:none!important}
+  .glass-panel{padding:14px 15px 13px!important;margin:6px auto 8px!important;max-width:480px}
+  .hero-identity{gap:14px!important;align-items:center!important}
+  .hero-identity .hero-avatar{width:124px!important;height:152px!important;border-radius:16px!important;flex:0 0 124px}
+  .glass-panel h1.hero-name{font-size:clamp(34px,10.5vw,50px)!important}
+  .role-line{margin:8px 0 0!important;font-size:8px!important}
+  .intro{font-size:11px!important;line-height:1.42!important;margin:7px 0 8px!important}
+  .details{gap:8px!important;padding:8px 0!important;grid-template-columns:1fr 1fr!important}
+  .interests{padding-top:8px!important}
+  .panel-footer{margin-top:8px!important;padding-top:8px!important}
+  .contact-button{height:36px!important;width:100%}
+  .social-rail{position:static!important;transform:none!important;width:100%!important;max-width:480px;margin:0 auto!important;padding:0!important;border:0!important;background:none!important;backdrop-filter:none!important;flex-direction:column!important;gap:6px!important;animation:none!important}
+  .social-rail .social-link{position:relative!important;width:100%!important;height:36px!important;flex:0 0 36px!important;border-radius:11px!important;display:flex!important;align-items:center;justify-content:flex-start;gap:12px;padding:0 16px;backdrop-filter:blur(12px);background:rgba(20,34,62,.72)!important}
+  .social-rail .social-link span{display:block!important;position:static!important;opacity:1!important;transform:none!important;padding:0!important;border:0!important;background:none!important;backdrop-filter:none!important;font-size:12px;letter-spacing:.5px}
+}
+@media(max-width:360px){.hero-identity .hero-avatar{width:108px!important;height:134px!important;flex-basis:108px}.glass-panel h1.hero-name{font-size:32px!important}}
